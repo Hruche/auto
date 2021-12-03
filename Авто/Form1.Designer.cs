@@ -33,6 +33,8 @@ namespace Авто
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.итоговая_АттестацияBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.итоговая_АттестацияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.автошколаDataSet = new Авто.АвтошколаDataSet();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -45,17 +47,9 @@ namespace Авто
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.итоговая_АттестацияBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.итоговая_АттестацияDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.автомобилиBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.автошколаDataSet = new Авто.АвтошколаDataSet();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.инструктораBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -64,7 +58,13 @@ namespace Авто
             this.ученикиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.экзаменBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.итоговая_АттестацияBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.итоговая_АттестацияTableAdapter = new Авто.АвтошколаDataSetTableAdapters.Итоговая_АттестацияTableAdapter();
             this.tableAdapterManager = new Авто.АвтошколаDataSetTableAdapters.TableAdapterManager();
             this.автомобилиTableAdapter = new Авто.АвтошколаDataSetTableAdapters.АвтомобилиTableAdapter();
@@ -73,13 +73,13 @@ namespace Авто
             this.экзаменTableAdapter = new Авто.АвтошколаDataSetTableAdapters.ЭкзаменTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияBindingNavigator)).BeginInit();
             this.итоговая_АттестацияBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.автошколаDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.автомобилиBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.автошколаDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.инструктораBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ученикиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.экзаменBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // итоговая_АттестацияBindingNavigator
@@ -120,6 +120,16 @@ namespace Авто
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Добавить";
+            // 
+            // итоговая_АттестацияBindingSource
+            // 
+            this.итоговая_АттестацияBindingSource.DataMember = "Итоговая_Аттестация";
+            this.итоговая_АттестацияBindingSource.DataSource = this.автошколаDataSet;
+            // 
+            // автошколаDataSet
+            // 
+            this.автошколаDataSet.DataSetName = "АвтошколаDataSet";
+            this.автошколаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -228,76 +238,6 @@ namespace Авто
             this.итоговая_АттестацияDataGridView.TabIndex = 1;
             this.итоговая_АттестацияDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.итоговая_АттестацияDataGridView_CellContentClick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(31, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Автомобили";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(31, 251);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Инструктора";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(31, 280);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(84, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Ученики";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(31, 309);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 23);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Экзамен";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(187, 222);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Запись";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(178, 251);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(99, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Редактирование";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(187, 280);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "Просмотр";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "Код";
@@ -319,11 +259,6 @@ namespace Авто
             // 
             this.автомобилиBindingSource.DataMember = "Автомобили";
             this.автомобилиBindingSource.DataSource = this.автошколаDataSet;
-            // 
-            // автошколаDataSet
-            // 
-            this.автошколаDataSet.DataSetName = "АвтошколаDataSet";
-            this.автошколаDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -385,10 +320,75 @@ namespace Авто
             this.экзаменBindingSource.DataMember = "Экзамен";
             this.экзаменBindingSource.DataSource = this.автошколаDataSet;
             // 
-            // итоговая_АттестацияBindingSource
+            // button1
             // 
-            this.итоговая_АттестацияBindingSource.DataMember = "Итоговая_Аттестация";
-            this.итоговая_АттестацияBindingSource.DataSource = this.автошколаDataSet;
+            this.button1.Location = new System.Drawing.Point(31, 222);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(84, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Автомобили";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(31, 251);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(84, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Инструктора";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(31, 280);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(84, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Ученики";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(31, 309);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 23);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Экзамен";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(334, 222);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Запись";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(178, 251);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(99, 23);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "Редактирование";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(187, 280);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "Просмотр";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // итоговая_АттестацияTableAdapter
             // 
@@ -442,13 +442,13 @@ namespace Авто
             ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияBindingNavigator)).EndInit();
             this.итоговая_АттестацияBindingNavigator.ResumeLayout(false);
             this.итоговая_АттестацияBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.автошколаDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.автомобилиBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.автошколаDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.инструктораBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ученикиBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.экзаменBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.итоговая_АттестацияBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
